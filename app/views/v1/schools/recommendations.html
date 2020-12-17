@@ -17,66 +17,120 @@ Question page
 
     <p>Based on the scores you have given so far, here are some recommendations for you to consider.</p>
 
+    <p><a href="#">Printable version</a></p>
+
+    <!-- <p>
+      {% if data['leadership_remote-ed-plan'] === '1' %} you chose 1 {% endif %}
+    </p> -->
 
 
-    <!-- <h2 class="govuk-heading-l">Leadership</h2>
 
 
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9 rubric-answers">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Remote education plan
-        </dt>
-        <dd class="govuk-summary-list__value">
-          4
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> Remote education plan</span>
-          </a>
-        </dd>
+
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Leadership
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <p><strong>Because you scored less than 3 for Remote education plan:<strong></p>
+          <p>The EdTech Demonstrator Programme provides resources to support schools and colleges. This includes <a href="#">short videos</a> developed by schools and colleges on developing remote education plans, and <a href-="#">guidance</a> on how
+            to embed digital technology.</p>
+          <p>GOV.UK has brought together <a href="#">school-led webinars</a> to share best practice in setting up remote education.</p>
+          <p>For guidance on how to remain cyber-secure, please refer to <a href="#">Cyber security in schools: questions for governors and trustees</a></p>
+          <p>Read the <a href="#">guidance for full opening and refer to Oak National Academy for help to deliver a planned curriculum for all</a>.</p>
+
+          <p><strong>Because you scored less than 3 for Monitoring and evaluation:<strong></p>
+          <p>GOV.UK provides the following guidance:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="#">recording attendance in relation to coronavirus (COVID-19) during the 2020 to 2021 academic year</a></li>
+            <li><a href="#">full opening for schools: school workforce</a></li>
+            <li><a href="#">remote education good practice</a></li>
+          </ul>
+
+        </div>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Communication
-        </dt>
-        <dd class="govuk-summary-list__value">
-          4
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> Communication</span>
-          </a>
-        </dd>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Remote education context and pupil engagement
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+        </div>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Monitoring and evaluating
-        </dt>
-        <dd class="govuk-summary-list__value">
-          3
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> Monitoring and evaluating</span>
-          </a>
-        </dd>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              Curriculum planning and delivery
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+          <p class='govuk-body'>Because all your scores in this section were above 3, we don't currently have any recommendations for you</p>
+        </div>
       </div>
-    </dl>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Capacity and capability
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+        </div>
+      </div>
 
 
-    <form action="/confirmation" method="post" novalidate>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+              Communication
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
+          <p class='govuk-body'>Because all your scores in this section were above 3, we don't currently have any recommendations for you</p>
+        </div>
+      </div>
 
-      <input type="hidden" name="answers-checked" value="true">
 
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Get recommendations
-      </button>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
+              Safeguarding and wellbeing
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
+          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+        </div>
+      </div>
 
-    </form> -->
+
+
+    </div>
+
+
+    <br>
+    <a href="task-list" class="govuk-button" data-module="govuk-button">
+      Return to task list overview</a>
+
+
+
 
 
 

@@ -24,7 +24,7 @@ Question page
           Remote education plan
         </dt>
         <dd class="govuk-summary-list__value">
-          4
+          {{ data['leadership_remote-ed-plan'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="#">
@@ -38,7 +38,7 @@ Question page
           Communication
         </dt>
         <dd class="govuk-summary-list__value">
-          4
+          {{ data['leadership_communication'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="#">
@@ -52,7 +52,7 @@ Question page
           Monitoring and evaluating
         </dt>
         <dd class="govuk-summary-list__value">
-          3
+          {{ data['leadership_monitoring-and-evaluating'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="#">
@@ -64,6 +64,7 @@ Question page
     </dl>
 
     <p>If you're happy that the score you have given .... ..... you can continue and get recommendations</p>
+    <br>
 
     <form action="recommendations" method="post" novalidate>
 
