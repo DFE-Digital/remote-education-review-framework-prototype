@@ -18,8 +18,19 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-.app-task-list__items.no-headings {
+.app-task-list__items.rerf {
   padding-left: 0;
+  margin-top: 60px;
+  .app-task-list__item {
+    padding: 20px 0;
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+  }
+  .app-task-list__task-name {
+    font-weight: bold;
+  }
 }
 .govuk-summary-list.rubric-answers {
 
