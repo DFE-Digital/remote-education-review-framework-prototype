@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Curriculum planning and delivery</h1>
+
+
+    <form class="form" action="curriculum-4" method="post">
+
+      <span class="govuk-caption-l">3 of 4</span>
+      <h2 class="govuk-heading-l">Curriculum delivery</h2>
+
+      <p>The school has a system in place to support remote education, using curriculum-aligned, hardcopy or digital resources, or a combination of both. </p>
+      <p>The school has online platforms and tools that support effective communication and accessibility for all pupils, including those with SEND.</p>
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with scoring
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p><strong>1. Identify</strong><br>
+            Not yet in place or there are major gaps.
+          </p>
+          <p><strong>2. Develop and plan</strong><br>
+            Identified gaps but a plan is being developed to address them.
+          </p>
+          <p><strong>3. Implement</strong><br>
+            In the process of implementing systems and practices to address this.
+          </p>
+          <p><strong>4. Embed</strong><br>
+            Practices and systems are in place with minor gaps.
+          </p>
+          <p><strong>5. Sustain</strong><br>
+            Practices and systems are fully embedded, and there are examples of best practice.
+          </p>
+
+        </div>
+      </details>
+
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery" name="curriculum_delivery" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-2" name="curriculum_delivery" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-3" name="curriculum_delivery" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-4" name="curriculum_delivery" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-5" name="curriculum_delivery" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <!-- <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Return to this later
+      </h2>
+      <p><a href="#">
+          Save my progress
+        </a></p>
+      <p>To make sure your review and results will not be lost at any time, get a reference code.</p>
+    </aside>
+  </div> -->
+
+
+
+
+</div>
+
+{% endblock %}
