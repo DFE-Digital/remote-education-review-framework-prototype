@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Capacity and capability</h1>
+
+
+    <form class="form" action="capacity-answers" method="post">
+
+      <span class="govuk-caption-l">3 of 3</span>
+      <h2 class="govuk-heading-l">Strategic partnerships</h2>
+
+      <p>The school is sharing best practice and making best use of capacity across schools to address any known gaps, including via established school-to-school support networks like the <a href="https://edtech-demonstrator.lgfl.net/home">EdTech Demonstrator Programme</a>.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with scoring
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+            <p><strong>1. Identify</strong><br>
+              Not yet in place or there are major gaps.
+            </p>
+            <p><strong>2. Develop and plan</strong><br>
+              Identified gaps but a plan is being developed to address them.
+            </p>
+            <p><strong>3. Implement</strong><br>
+              In the process of implementing systems and practices to address this.
+            </p>
+            <p><strong>4. Embed</strong><br>
+              Practices and systems are in place with minor gaps.
+            </p>
+            <p><strong>5. Sustain</strong><br>
+              Practices and systems are fully embedded, and there are examples of best practice.
+            </p>
+
+        </div>
+      </details>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_strategic-partnerships" name="capacity-capability_strategic-partnerships" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_strategic-partnerships">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_strategic-partnerships-2" name="capacity-capability_strategic-partnerships" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_strategic-partnerships-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_strategic-partnerships-3" name="capacity-capability_strategic-partnerships" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_strategic-partnerships-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_strategic-partnerships-4" name="capacity-capability_strategic-partnerships" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_strategic-partnerships-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_strategic-partnerships-5" name="capacity-capability_strategic-partnerships" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_strategic-partnerships-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <!-- <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Return to this later
+      </h2>
+      <p><a href="#">
+          Save my progress
+        </a></p>
+      <p>To make sure your review and results will not be lost at any time, get a reference code.</p>
+    </aside>
+  </div> -->
+
+
+
+
+</div>
+
+{% endblock %}

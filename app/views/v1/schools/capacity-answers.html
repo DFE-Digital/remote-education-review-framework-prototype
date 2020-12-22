@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your answers</h1>
+
+    <h2 class="govuk-heading-l">Capacity and capability</h2>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9 rubric-answers">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Effective practice
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['capacity-capability_effective-practice'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Effective practice</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Staff capability
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['capacity-capability_staff-capability'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Staff capability</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Strategic partnerships
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['capacity-capability_strategic-partnerships'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Strategic partnerships</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <p>If you're happy that the score you have given .... ..... you can continue and get recommendations</p>
+    <br>
+
+    <form action="recommendations" method="post" novalidate>
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Get recommendations
+      </button>
+
+    </form>
+
+
+
+  </div>
+
+
+  <!-- <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Return to this later
+      </h2>
+      <p><a href="#">
+          Save my progress
+        </a></p>
+      <p>To make sure your review and results will not be lost at any time, get a reference code.</p>
+    </aside>
+  </div> -->
+
+
+
+
+</div>
+
+{% endblock %}
