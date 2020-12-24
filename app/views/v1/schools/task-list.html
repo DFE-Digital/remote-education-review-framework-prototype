@@ -130,16 +130,6 @@ Task list
       </h2>
       <nav role="navigation" aria-labelledby="subsection-title">
         <ul class="govuk-list govuk-!-font-size-16">
-          <!-- <li>
-            <a href="#">
-              Aims of the framework
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Why schools need the framework
-            </a>
-          </li> -->
           <li>
             <a href="using-the-framework">
               Using the framework
@@ -150,29 +140,29 @@ Task list
               Scoring
             </a>
           </li>
-        </ul>
-      </nav>
-    </aside>
-    <aside class="app-related-items" role="complementary">
-      <h2 class="govuk-heading-m" id="subsection-title">
-        Your framework
-      </h2>
-      <nav role="navigation" aria-labelledby="subsection-title">
-        <ul class="govuk-list govuk-!-font-size-16">
+
+          <!-- LOGIC NEEDS EXTENDING TO CHECK FOR ANY COMPLETED SECTION -->
+          {%
+            if data['leadership_monitoring-and-evaluating'] or data['recpe_pdsl']
+          %}
+
           <li>
-            <a href="task-list">
-              View your task list
-            </a>
-          </li>
-          <li>
-            <a href="recommendations">
+            <a href="recommendations"><strong>
               View your recommendations
+              </strong>
             </a>
-            <span>[would only be shown once at least one section has been completed]</span>
           </li>
+          {% endif %}
+
+
+
+
+
+
         </ul>
       </nav>
     </aside>
+
   </div>
 
 
