@@ -7,4 +7,10 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
-})
+
+  if (theCurrentPage == 'recommendations') {
+    $('.govuk-accordion__section--expanded button').click();
+    $('.js-expanded button').click();
+  }
+
+});

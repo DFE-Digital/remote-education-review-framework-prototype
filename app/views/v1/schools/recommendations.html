@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Question page
+Scores and recommendations
 {% endblock %}
 
 {% block beforeContent %}
@@ -9,7 +9,11 @@ Question page
 {% endblock %}
 
 {% block content %}
+<script type="text/javascript">
+  var theCurrentPage = 'recommendations';
+</script>
 
+  </script>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
@@ -17,21 +21,20 @@ Question page
 
     <p>Based on the scores you have given so far, you could consider the following recommendations to improve your remote education provision.</p>
 
-    <p><a href="#">Print a copy of your recommendations</a></p>
-
-    <p><a href="task-list">
+    <p><a href="#" class="govuk-button govuk-button--secondary">Print a copy of your recommendations</a>
+      <br>
+    <a href="task-list">
         Return to task list overview</a></p>
 
   </div>
 
   <div class="govuk-grid-column-full">
 
+
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 
 
-
-
-      <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'leadership'}}">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -92,7 +95,7 @@ Question page
 
 
 
-      <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'recpe'}}">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
@@ -165,7 +168,7 @@ Question page
 
 
 
-      <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'curriculum'}}">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
@@ -240,7 +243,7 @@ Question page
 
 
 
-      <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'capacity'}}">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
@@ -301,7 +304,7 @@ Question page
 
 
 
-      <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'communication'}}">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
@@ -346,7 +349,7 @@ Question page
 
 
 
-      <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'safeguarding'}}">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
@@ -418,10 +421,6 @@ Question page
       </div>
 
 
-
-
-
-
     </div>
 
 
@@ -429,5 +428,7 @@ Question page
 
 
 </div>
+
+
 
 {% endblock %}

@@ -19,12 +19,19 @@ Task list
     <p>The categories below provide a structure to identify the current position of your remote education provision. Assessing each category will help you to identify areas of strength and those needing further work.</p>
 
 
-    <!-- <p>
-      {% if data['leadership_monitoring-and-evaluating'] === '1' %} you chose 1 {% endif %}
-      {% if data['leadership_monitoring-and-evaluating'] === '1' %} you chose 1 {% endif %}
-    </p> -->
-    <!-- <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong> -->
-    <!-- <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="recpe-status">In progress</strong> -->
+    {%
+      if data['leadership_monitoring-and-evaluating'] or data['recpe_pdsl']
+    %}
+    <form action="recommendations" method="post" novalidate>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        View your recommendations
+      </button>
+
+      <input type="hidden" name="referrer" value="task-list">
+
+    </form>
+    {% endif %}
 
 
 
@@ -36,9 +43,9 @@ Task list
           </a>
         </span>
         {% if data['leadership_monitoring-and-evaluating'] %}
-          <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
         {% else %}
-          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
         {% endif %}
         <br>
         <p>School leaders have a clear vision and approach for remote education, and maintain awareness of any issues or barriers related to effective delivery.</p>
@@ -51,9 +58,9 @@ Task list
           </a>
         </span>
         {% if data['recpe_pdsl'] %}
-          <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
         {% else %}
-          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
         {% endif %}
         <br>
         <p>The school understands the remote education context of pupils, and plans its provision to ensure pupils can remain engaged in education.</p>
@@ -66,9 +73,9 @@ Task list
           </a>
         </span>
         {% if data['curriculum_assessment'] %}
-          <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
         {% else %}
-          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
         {% endif %}
         <br>
         <p>The school has well-sequenced curricula that support ‘hybrid’ teaching, and has the relevant resources in place to deliver the curriculum remotely.</p>
@@ -81,9 +88,9 @@ Task list
           </a>
         </span>
         {% if data['capacity-capability_strategic-partnerships'] %}
-          <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
         {% else %}
-          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
         {% endif %}
         <br>
         <p>Schools support staff to deliver high-quality remote education.</p>
@@ -96,9 +103,9 @@ Task list
           </a>
         </span>
         {% if data['communication_community-events'] %}
-          <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
         {% else %}
-          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
         {% endif %}
         <br>
         <p>The school maintains strong communication with pupils, parents and carers, and continues to work effectively with other third parties.</p>
@@ -111,9 +118,9 @@ Task list
           </a>
         </span>
         {% if data['safeguarding_behaviour'] %}
-          <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
         {% else %}
-          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
         {% endif %}
         <br>
         <p>Teachers and leaders understand how to maintain effective safeguarding arrangements whilst also providing high-quality remote education and supporting pupil wellbeing.</p>
@@ -124,45 +131,7 @@ Task list
 
 
   <div class="govuk-grid-column-one-third">
-    <aside class="app-related-items" role="complementary">
-      <h2 class="govuk-heading-m" id="subsection-title">
-        About the framework
-      </h2>
-      <nav role="navigation" aria-labelledby="subsection-title">
-        <ul class="govuk-list govuk-!-font-size-16">
-          <li>
-            <a href="using-the-framework">
-              Using the framework
-            </a>
-          </li>
-          <li>
-            <a href="scoring">
-              Scoring
-            </a>
-          </li>
-
-          <!-- LOGIC NEEDS EXTENDING TO CHECK FOR ANY COMPLETED SECTION -->
-          {%
-            if data['leadership_monitoring-and-evaluating'] or data['recpe_pdsl']
-          %}
-
-          <li>
-            <a href="recommendations"><strong>
-              View your recommendations
-              </strong>
-            </a>
-          </li>
-          {% endif %}
-
-
-
-
-
-
-        </ul>
-      </nav>
-    </aside>
-
+    {% include "v1/schools/scoring_aside.html" %}
   </div>
 
 
