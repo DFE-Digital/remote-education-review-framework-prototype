@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your answers</h1>
+
+    <h2 class="govuk-heading-l">Communication and partnership working</h2>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9 rubric-answers">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Realistic expectations of students, parents and carers
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['communication_realistic-expectations'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Realistic expectations of students, parents and carers</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          College community events
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['communication_community-events'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> College community events</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Employer partnerships
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['communication_employer-partnerships'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Employer partnerships</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <p>Once you're happy with your scores, you can get recommendations on how to improve your remote education provision.</p>
+    <br>
+
+    <form action="recommendations" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <input type="hidden" name="referrer" value="communication">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Get recommendations
+      </button>
+    </form>
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}
