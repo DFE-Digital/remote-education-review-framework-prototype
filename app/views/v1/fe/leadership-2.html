@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Leadership</h1>
+
+    <!-- <p>School leaders have a clear vision and approach for remote education, and maintain awareness of any issues or barriers related to effective delivery.</p>
+    <br> -->
+
+    <form class="form" action="leadership-3" method="post">
+
+      <span class="govuk-caption-l">2 of 3</span>
+      <h2 class="govuk-heading-l">Communication</h2>
+
+      <p>Students, apprentices, parents and carers, staff, governors and employers are aware of the college’s approach and arrangements for remote education.</p>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_communication" name="leadership_communication" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="leadership_communication">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_communication-2" name="leadership_communication" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="leadership_communication-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_communication-3" name="leadership_communication" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="leadership_communication-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_communication-4" name="leadership_communication" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="leadership_communication-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_communication-5" name="leadership_communication" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="leadership_communication-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v1/fe/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

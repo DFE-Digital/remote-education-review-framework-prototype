@@ -1,108 +1,141 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Task list
+Task list
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        FE
-      </h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Remote education review framework
+    </h1>
 
-      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 8 sections.</p>
+    <p>The categories below provide a structure to identify the current position of your remote education provision. Assessing each category will help you to identify areas of strength and those needing further work.</p>
 
-      <ol class="app-task-list">
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">1. </span> Check before you start
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="eligibility-status">
-                  Check eligibility
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="read-declaration-status">
-                  Read declaration
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
-            </li>
-          </ul>
-        </li>
 
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">2. </span> Prepare application
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="company-information-status">
-                  Company information
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="company-information-status">Completed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="contact-details-status">
-                  Your contact details
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="list-convictions-status">
-                  List convictions
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                Provide financial evidence
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">Cannot start yet</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                Give medical information
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
+    {%
+      if data['leadership_monitoring-and-evaluating'] or data['recpe_pdsl']
+    %}
+    <form action="recommendations" method="post" novalidate>
 
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> Apply
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                Submit and pay
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        View your recommendations
+      </button>
+
+      <input type="hidden" name="referrer" value="task-list">
+
+    </form>
+    {% endif %}
+
+
+
+    <ul class="app-task-list__items rerf">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="leadership-1" aria-describedby="leadership-status">
+            Leadership
+          </a>
+        </span>
+        {% if data['leadership_monitoring-and-evaluating'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>College leaders have a clear vision and approach for remote education, and maintain awareness of any issues or barriers related to effective delivery.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="recpe-1" aria-describedby="recpe-status">
+            Remote education context and student engagement
+          </a>
+        </span>
+        {% if data['recpe_pdsl'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>The college understands the students' remote education context, and plans its provision to ensure students can remain engaged in education.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="curriculum-1" aria-describedby="curriculum-status">
+            Curriculum planning and delivery
+          </a>
+        </span>
+        {% if data['curriculum_assessment'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>The college has well-sequenced curricula that support ‘hybrid’ teaching, and has the relevant resources in place to deliver the curriculum or course content remotely.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="capacity-1" aria-describedby="capacity-status">
+            Capacity and capability
+          </a>
+        </span>
+        {% if data['capacity-capability_strategic-partnerships'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Colleges support staff to deliver high-quality remote education.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="communication-1" aria-describedby="communication-status">
+            Communication and partnership working
+          </a>
+        </span>
+        {% if data['communication_community-events'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>The college maintains strong communication with students, parents and carers, and continues to work effectively with other third parties.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="safeguarding-1" aria-describedby="safeguarding-status">
+            Safeguarding and wellbeing
+          </a>
+        </span>
+        {% if data['safeguarding_behaviour'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Teachers and leaders understand how to maintain effective safeguarding arrangements whilst also providing high-quality remote education and supporting student wellbeing.</p>
+      </li>
+    </ul>
+
   </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v1/fe/scoring_aside.html" %}
+  </div>
+
+
+
+</div>
 
 {% endblock %}
