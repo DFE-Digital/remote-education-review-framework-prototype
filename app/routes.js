@@ -13,7 +13,7 @@ router.post('/v1/sector-answer', function (req, res) {
   if (whichsector === 'schools') {
     res.redirect('/v1/schools/summary')
   } else {
-    res.redirect('/v1/fe/task-list')
+    res.redirect('/v1/fe/summary')
   }
 })
 

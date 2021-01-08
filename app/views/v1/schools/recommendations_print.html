@@ -21,7 +21,7 @@ Scores and recommendations
 
     <p>Based on the scores you have given so far, you could consider the following recommendations to improve your remote education provision.</p>
 
-    <p><a href="recommendations_print" class="govuk-button govuk-button--secondary">Print a copy of your recommendations</a>
+    <p><a href="#" class="govuk-button govuk-button--secondary">Print a copy of your recommendations</a>
       <br>
     <a href="task-list">
         Return to task list overview</a></p>
@@ -33,18 +33,16 @@ Scores and recommendations
   <div class="govuk-grid-column-full">
 
 
-    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+    <div class="print-version">
 
 
-      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'leadership'}}">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      <div>
+        <div>
+          <h2 class="govuk-heading-l">
               Leadership
-            </span>
           </h2>
         </div>
-        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+        <div>
 
           {% if data['leadership_remote-ed-plan'] == null %}
           <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
@@ -97,15 +95,13 @@ Scores and recommendations
 
 
 
-      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'recpe'}}">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+      <div>
+        <div>
+          <h2 class="govuk-heading-l">
               Remote education context and pupil engagement
-            </span>
           </h2>
         </div>
-        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+        <div>
           {% if data['recpe_laptops-tablets'] == null %}
           <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
           {% else %}
@@ -170,15 +166,15 @@ Scores and recommendations
 
 
 
-      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'curriculum'}}">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+      <div>
+        <div>
+          <h2 class="govuk-heading-l">
+            <span>
               Curriculum planning and delivery
             </span>
           </h2>
         </div>
-        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+        <div>
           {% if data['curriculum_minimum-provision'] == null %}
           <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
           {% else %}
@@ -245,15 +241,15 @@ Scores and recommendations
 
 
 
-      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'capacity'}}">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+      <div>
+        <div>
+          <h2 class="govuk-heading-l">
+            <span>
               Capacity and capability
             </span>
           </h2>
         </div>
-        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+        <div>
           {% if data['capacity-capability_effective-practice'] == null %}
             <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
           {% else %}
@@ -306,15 +302,15 @@ Scores and recommendations
 
 
 
-      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'communication'}}">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+      <div>
+        <div>
+          <h2 class="govuk-heading-l">
+            <span>
               Communication
             </span>
           </h2>
         </div>
-        <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
+        <div>
           {% if data['communication_realistic-expectations'] == null %}
             <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
           {% else %}
@@ -351,15 +347,15 @@ Scores and recommendations
 
 
 
-      <div class="govuk-accordion__section {{'js-expanded' if data['referrer'] == 'safeguarding'}}">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
+      <div>
+        <div>
+          <h2 class="govuk-heading-l">
+            <span>
               Safeguarding and wellbeing
             </span>
           </h2>
         </div>
-        <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
+        <div>
           {% if data['safeguarding_ensuring-safety'] == null %}
             <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
           {% else %}
