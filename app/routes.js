@@ -11,9 +11,9 @@ router.post('/v1/sector-answer', function (req, res) {
   const whichsector = req.session.data['which-sector']
 
   if (whichsector === 'schools') {
-    res.redirect('/v1/schools/summary')
+    res.redirect('/v1/schools/task-list')
   } else {
-    res.redirect('/v1/fe/summary')
+    res.redirect('/v1/fe/task-list')
   }
 })
 

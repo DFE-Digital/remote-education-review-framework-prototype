@@ -23,8 +23,8 @@ Scores and recommendations
 
     <p><a href="recommendations_print" class="govuk-button govuk-button--secondary">Print a copy of your recommendations</a>
       <br>
-    <a href="task-list">
-        Return to task list overview</a></p>
+    <a href="task-list" class="govuk-button">
+        Return to category overview</a></p>
 
   </div>
 
@@ -47,7 +47,7 @@ Scores and recommendations
         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
           {% if data['leadership_remote-ed-plan'] == null %}
-          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+          <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
             <div class="statement-block">
               <h3 class="govuk-heading-m">You scored {{ data['leadership_remote-ed-plan'] }} for remote education plan:</h3>
@@ -97,7 +97,7 @@ Scores and recommendations
         </div>
         <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
           {% if data['recpe_laptops-tablets'] == null %}
-          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+          <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
             <div class="statement-block">
@@ -162,7 +162,7 @@ Scores and recommendations
         </div>
         <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
           {% if data['curriculum_minimum-provision'] == null %}
-          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+          <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
 
@@ -231,7 +231,7 @@ Scores and recommendations
         </div>
         <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
           {% if data['capacity-capability_effective-practice'] == null %}
-            <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+            <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
             <div class="statement-block">
@@ -280,7 +280,7 @@ Scores and recommendations
         </div>
         <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
           {% if data['communication_realistic-expectations'] == null %}
-            <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+            <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
 
@@ -327,7 +327,7 @@ Scores and recommendations
         </div>
         <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
           {% if data['safeguarding_ensuring-safety'] == null %}
-            <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+            <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
             <div class="statement-block">

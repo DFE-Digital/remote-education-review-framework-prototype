@@ -23,8 +23,8 @@ Scores and recommendations
 
     <p><a href="#" class="govuk-button govuk-button--secondary">Print a copy of your recommendations</a>
       <br>
-    <a href="task-list">
-        Return to task list overview</a></p>
+    <a href="task-list" class="govuk-button">
+        Return to category overview</a></p>
 
   </div>
 
@@ -45,7 +45,7 @@ Scores and recommendations
         <div>
 
           {% if data['leadership_remote-ed-plan'] == null %}
-          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+          <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
             <div class="statement-block">
               <h3 class="govuk-heading-m">You scored {{ data['leadership_remote-ed-plan'] }} for remote education plan:</h3>
@@ -103,7 +103,7 @@ Scores and recommendations
         </div>
         <div>
           {% if data['recpe_laptops-tablets'] == null %}
-          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+          <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
             <div class="statement-block">
@@ -176,7 +176,7 @@ Scores and recommendations
         </div>
         <div>
           {% if data['curriculum_minimum-provision'] == null %}
-          <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+          <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
 
@@ -251,7 +251,7 @@ Scores and recommendations
         </div>
         <div>
           {% if data['capacity-capability_effective-practice'] == null %}
-            <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+            <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
             <div class="statement-block">
@@ -312,7 +312,7 @@ Scores and recommendations
         </div>
         <div>
           {% if data['communication_realistic-expectations'] == null %}
-            <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+            <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
 
@@ -357,7 +357,7 @@ Scores and recommendations
         </div>
         <div>
           {% if data['safeguarding_ensuring-safety'] == null %}
-            <p class='govuk-body'>You haven't yet given any scores for this section. Manage your <a href="task-list">outstanding tasks here</a></p>
+            <p class='govuk-body'>You haven't yet given any scores for this section. Complete your <a href="task-list">outstanding categories</a></p>
           {% else %}
 
             <div class="statement-block">
