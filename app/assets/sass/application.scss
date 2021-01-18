@@ -50,3 +50,7 @@ $govuk-assets-path: '/govuk/assets/';
   padding: 1rem 20% 1rem 1rem;
   margin-bottom: 2rem;
 }
+
+.govuk-form-group .govuk-heading-l + .govuk-label {
+  margin-top: -18px;
+}
