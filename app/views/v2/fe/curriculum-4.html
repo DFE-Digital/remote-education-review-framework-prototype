@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Curriculum planning and delivery</h1>
+
+
+    <form class="form" action="curriculum-5" method="post">
+
+      <span class="govuk-caption-l">4 of 5</span>
+      <h2 class="govuk-heading-l">Apprenticeships</h2>
+
+      <p>The college is working with employers to ensure continuity of off-the-job training, assessor reviews and planning for end-point assessments</p>
+      <p>The college has a clear contingency plan which is well communicated with all stakeholders.</p>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_apprenticeships" name="curriculum_apprenticeships" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="curriculum_apprenticeships">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_apprenticeships-2" name="curriculum_apprenticeships" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="curriculum_apprenticeships-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_apprenticeships-3" name="curriculum_apprenticeships" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="curriculum_apprenticeships-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_apprenticeships-4" name="curriculum_apprenticeships" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="curriculum_apprenticeships-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_apprenticeships-5" name="curriculum_apprenticeships" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="curriculum_apprenticeships-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v2/fe/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

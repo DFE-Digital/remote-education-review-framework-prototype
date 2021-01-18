@@ -15,6 +15,15 @@ router.post('/v1/sector-answer', function (req, res) {
   } else {
     res.redirect('/v1/fe/optional')
   }
-})
+});
+
+router.post('/v2/sector-answer', function (req, res) {
+  const whichsector = req.session.data['which-sector']
+  if (whichsector === 'schools') {
+    res.redirect('/v2/schools/optional')
+  } else {
+    res.redirect('/v2/fe/optional')
+  }
+});
 
 module.exports = router

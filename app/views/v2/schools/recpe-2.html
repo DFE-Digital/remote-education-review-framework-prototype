@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Remote education context and pupil engagement</h1>
+
+
+    <form class="form" action="recpe-3" method="post">
+
+      <span class="govuk-caption-l">2 of 5</span>
+      <h2 class="govuk-heading-l">Laptops, tablets and internet access</h2>
+
+      <p>Leaders are aware of any limitations to access to the internet, and suitable devices, for pupils which impact on remote education provision, and have made suitable alternative arrangements to minimise the impact of these limitations, either by providing pupils with devices and/or internet access, or ensuring appropriate offline provision.</p>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_laptops-tablets" name="recpe_laptops-tablets" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="recpe_laptops-tablets">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_laptops-tablets-2" name="recpe_laptops-tablets" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="recpe_laptops-tablets-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_laptops-tablets-3" name="recpe_laptops-tablets" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="recpe_laptops-tablets-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_laptops-tablets-4" name="recpe_laptops-tablets" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="recpe_laptops-tablets-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_laptops-tablets-5" name="recpe_laptops-tablets" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="recpe_laptops-tablets-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v2/schools/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

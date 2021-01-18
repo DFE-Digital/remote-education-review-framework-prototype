@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      What the remote education review framework is
+    </h1>
+
+    <!-- <p>From 5 January 2021, all schools and colleges are required to close to most pupils and students. Whilst vulnerable pupils and students, and the children of key workers, can continue to be educated in person, DfE expects schools and colleges to immediately offer all other pupils and students access to remote education.</p> -->
+
+    <p>The framework has been produced to support schools and colleges in England to identify the strengths and areas for improvement in their remote education provision. It provides links to guidance and resources to help you improve your provision.</p>
+
+    <h2 class="govuk-heading-l">
+      Who it is for
+    </h2>
+
+    <p>This framework is for:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>MAT leaders</li>
+      <li>schools leaders</li>
+      <li>governors</li>
+      <li>senior leaders in FE providers (including colleges, sixth from providers and independent training providers)</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">
+      How it works
+    </h2>
+
+    <p>You can work through the entire framework to identify strengths and areas for improvement in remote education with your senior leadership team (taking approximately 1 hour to complete as a group), or focus on specific sections that have been previously identified as priorities.</p>
+
+    <p>The framework is not intended as a compliance or accountability tool. It is not statutory, and schools and colleges can adapt it to fit their context. The framework differs from the <a href="https://www.gov.uk/government/publications/providing-remote-education-information-to-parents-template">remote education template</a>, which is a high-level summary of remote education provision for parents, carers and pupils.</p>
+
+    <br>
+    <a href="task-list" class="govuk-button" data-module="govuk-button">
+      Continue</a>
+
+  </div>
+</div>
+
+{% endblock %}

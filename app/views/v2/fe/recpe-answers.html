@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your answers</h1>
+
+    <h2 class="govuk-heading-l">Remote education context and student engagement</h2>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9 rubric-answers">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Home environment
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['recpe_home-environment'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Home environment</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Laptops, tablets and internet access
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['recpe_laptops-tablets'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Laptops, tablets and internet access</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Supporting children with additional needs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['recpe_send'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Supporting students with additional needs</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Monitoring engagement
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['recpe_monitoring'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Monitoring engagement</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Pupil digital skills and literacy
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['recpe_pdsl'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Student digital skills and literacy</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <p>Once you're happy with your scores, you can get recommendations on how to improve your remote education provision.</p>
+    <br>
+
+    <form action="recommendations" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <input type="hidden" name="referrer" value="recpe">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Get recommendations
+      </button>
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v2/fe/scoring_aside.html" %}
+  </div>  
+
+</div>
+
+{% endblock %}

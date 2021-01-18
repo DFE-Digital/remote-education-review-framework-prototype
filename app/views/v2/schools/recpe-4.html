@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Remote education context and pupil engagement</h1>
+
+
+    <form class="form" action="recpe-5" method="post">
+
+      <span class="govuk-caption-l">4 of 5</span>
+      <h2 class="govuk-heading-l">Monitoring engagement</h2>
+
+      <p>The school has systems for checking, at least weekly, whether pupils are engaging with their work, and informs parents or carers immediately where engagement is a concern.</p>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_monitoring" name="recpe_monitoring" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="recpe_monitoring">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_monitoring-2" name="recpe_monitoring" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="recpe_monitoring-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_monitoring-3" name="recpe_monitoring" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="recpe_monitoring-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_monitoring-4" name="recpe_monitoring" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="recpe_monitoring-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_monitoring-5" name="recpe_monitoring" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="recpe_monitoring-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v2/schools/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

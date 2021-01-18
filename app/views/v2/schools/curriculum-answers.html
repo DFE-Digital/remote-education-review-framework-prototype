@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your answers</h1>
+
+    <h2 class="govuk-heading-l">Curriculum planning and delivery</h2>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9 rubric-answers">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Minimum provision
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['curriculum_minimum-provision'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Minimum provision</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Curriculum planning
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['curriculum_planning'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Curriculum planning</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Curriculum delivery
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['curriculum_delivery'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Curriculum delivery</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Assessment and feedback
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['curriculum_assessment'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Assessment and feedback</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <p>Once you're happy with your scores, you can get recommendations on how to improve your remote education provision.</p>
+    <br>
+
+    <form action="recommendations" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <input type="hidden" name="referrer" value="curriculum">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Get recommendations
+      </button>
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v2/schools/scoring_aside.html" %}
+  </div>    
+
+</div>
+
+{% endblock %}
