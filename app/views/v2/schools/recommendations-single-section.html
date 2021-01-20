@@ -16,16 +16,12 @@ Scores and recommendations
 </script>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <h1 class="govuk-heading-xl">Your recommendations</h1>
-
     <p>Based on the scores you have given so far, you could consider the following recommendations to improve your remote education provision.</p>
-
     <p>
       <a href="task-list" class="govuk-button">
         Return to category overview</a>
     </p>
-
   </div>
 
 
@@ -39,40 +35,40 @@ Scores and recommendations
 
       <div class="statement-block">
         <h3 class="govuk-heading-m">You scored {{ data['leadership_remote-ed-plan'] }} for remote education plan:</h3>
-        {% if data['leadership_remote-ed-plan'] < 3 %}
+        {#   {% if data['leadership_remote-ed-plan'] < 3 %}   #}
         <p>The EdTech Demonstrator Programme provides resources to support schools and colleges. This includes <a href="#">short videos</a> developed by schools and colleges on developing remote education plans, and <a href-="#">guidance</a> on
           how
           to embed digital technology.</p>
         <p>GOV.UK has brought together <a href="#">school-led webinars</a> to share best practice in setting up remote education.</p>
         <p>For guidance on how to remain cyber-secure, please refer to <a href="#">Cyber security in schools: questions for governors and trustees</a></p>
         <p>Read the <a href="#">guidance for full opening and refer to Oak National Academy for help to deliver a planned curriculum for all</a>.</p>
-        {% else %}
+        {#   {% else %}   #}
         <p>You have no recommendations in this category as you scored 3 or above</p>
-        {% endif %}
+        {#   {% endif %}   #}
       </div>
 
       <div class="statement-block">
         <h3 class="govuk-heading-m">You scored {{ data['leadership_communication'] }} for communication:</h3>
-        {% if data['leadership_communication'] < 3 %}
+        {#   {% if data['leadership_communication'] < 3 %}   #}
         <p>Ensure governors, staff, parents and carers are aware of the school’s remote education provision by maintaining regular communication and providing updates on any changes to the provision.</p>
         <p>The Education Endowment Foundation has provided a <a href="#">guide for schools</a> on how to communicate with parents during COVID-19.</p>
-        {% else %}
+        {#   {% else %}   #}
         <p>You have no recommendations in this category as you scored 3 or above</p>
-        {% endif %}
+        {#   {% endif %}   #}
       </div>
 
       <div class="statement-block">
         <h3 class="govuk-heading-m">You scored {{ data['leadership_monitoring-and-evaluating'] }} for monitoring and evaluation:</h3>
-        {% if data['leadership_monitoring-and-evaluating'] < 3 %}
+        {#   {% if data['leadership_monitoring-and-evaluating'] < 3 %}   #}
         <p>GOV.UK provides the following guidance:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li><a href="#">recording attendance in relation to coronavirus (COVID-19) during the 2020 to 2021 academic year</a></li>
           <li><a href="#">full opening for schools: school workforce</a></li>
           <li><a href="#">remote education good practice</a></li>
         </ul>
-        {% else %}
+        {#   {% else %}   #}
         <p>You have no recommendations in this category as you scored 3 or above</p>
-        {% endif %}
+        {#   {% endif %}   #}
       </div>
   {% endif %}
 
@@ -85,7 +81,7 @@ Scores and recommendations
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['recpe_home-environment'] }} for home environment:</h3>
-          {% if data['recpe_home-environment'] < 3 %}
+          {#   {% if data['recpe_home-environment'] < 3 %}   #}
           <p>The EdTech Demonstrator Programme's <a href="https://edtech-demonstrator.lgfl.net/guidance/steady-ready-go">remote education roadmap</a> supports schools to adapt their remote education provision depending on a pupil's home environment.
           </p>
           <p>Where pupils might lack digital access to support the school's remote education provision, schools should refer to the <a href="https://www.gov.uk/guidance/get-help-with-technology-for-remote-education-during-coronavirus-covid-19">Get
@@ -93,54 +89,54 @@ Scores and recommendations
               href="https://get-help-with-tech.education.gov.uk/internet-access">internet</a>.</p>
           <p>The Education Endowment Foundation provides a <a href="https://educationendowmentfoundation.org.uk/evidence-summaries/teaching-learning-toolkit/meta-cognition-and-self-regulation/">metacognition and self-regulation toolkit</a> on how
             schools can support pupils to plan, monitor, and evaluate specific aspects of their learning.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['recpe_laptops-tablets'] }} for laptops, tablets and internet access:</h3>
-          {% if data['recpe_laptops-tablets'] < 3 %}
+          {#   {% if data['recpe_laptops-tablets'] < 3 %}   #}
           <p>Where technology is used to support remote education, the EdTech Demonstrator Programme offers resources on <a href="https://edtech-demonstrator.lgfl.net/guidance/getting-started">how to set up a virtual classroom</a> and how to <a
               href="https://edtech-demonstrator.lgfl.net/guidance/strategy">embed technology into teaching practice</a>.</p>
           <p>Where pupils might lack digital access to support the school's remote education provision, schools should refer to the <a href="https://www.gov.uk/guidance/get-help-with-technology-for-remote-education-during-coronavirus-covid-19">Get
               help with technology during coronavirus (COVID-19)</a> guidance for support on providing pupils with <a href="https://get-help-with-tech.education.gov.uk/devices">laptops, tablets</a> and <a
               href="https://get-help-with-tech.education.gov.uk/internet-access">internet</a>.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['recpe_send'] }} for supporting children with additional needs:</h3>
-          {% if data['recpe_send'] < 3 %}
+          {#   {% if data['recpe_send'] < 3 %}   #}
           <p>The EdTech Demonstrator Programme has made <a href="https://edtech-demonstrator.lgfl.net/guidance/special-educational-needs">a range of SEND resources</a> available for schools and colleges, including webinars on how to support pupils
             with SEND.</p>
           <p>The guidance for full opening provides guidance on how schools should support <a
               href="https://www.gov.uk/government/publications/actions-for-schools-during-the-coronavirus-outbreak/guidance-for-full-opening-schools#vulnerable-children">pupils with SEND and vulnerable children</a>.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['recpe_monitoring'] }} for monitoring engagement:</h3>
-          {% if data['recpe_monitoring'] < 3 %}
+          {#   {% if data['recpe_monitoring'] < 3 %}   #}
           <p>Advice on how schools should monitor engagement is highlighted in the <a href="https://www.gov.uk/government/publications/actions-for-schools-during-the-coronavirus-outbreak/guidance-for-full-opening-schools#res">Remote education
               expectations guidance</a>.</p>
           <p>EdTech Demonstrator networks have produced a range of webinars and tutorials, including <a href="https://lgfl.planetestream.com/View.aspx?id=4384~4t~UZIMjDBF">sharing advice and top tips on ways to monitor and evaluate progress</a>.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['recpe_pdsl'] }} for pupil digital skills and literacy:</h3>
-          {% if data['recpe_pdsl'] < 3 %}
+          {#   {% if data['recpe_pdsl'] < 3 %}   #}
           <p>Where technology is used to support the school's remote education provision, schools should consider providing practical support and guidance to pupils on how to use the technology.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
   {% endif %}
 
@@ -154,29 +150,29 @@ Scores and recommendations
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['curriculum_minimum-provision'] }} for minimum provision:</h3>
-          {% if data['curriculum_minimum-provision'] < 3 %}
+          {#   {% if data['curriculum_minimum-provision'] < 3 %}   #}
           <p>Remote education expectations are highlighted in <a href="https://www.gov.uk/government/publications/actions-for-schools-during-the-coronavirus-outbreak/guidance-for-full-opening-schools#res">the guidance for full opening</a>.</p>
           <p>GOV.UK has brought together <a href="https://www.gov.uk/guidance/remote-education-webinars">school-led webinars</a> to share best practice in setting up remote education.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['curriculum_planning'] }} for curriculum planning:</h3>
-          {% if data['curriculum_planning'] < 3 %}
+          {#   {% if data['curriculum_planning'] < 3 %}   #}
           <p>GOV.UK provides resources on <a href="https://www.gov.uk/government/publications/remote-education-good-practice">remote education good practice</a> and <a
               href="https://www.gov.uk/guidance/adapting-teaching-practice-for-remote-education">how to adapt teaching practice</a> for remote education.</p>
           <p>The Education Endowment Foundation provides <a href="https://educationendowmentfoundation.org.uk/covid-19-resources/national-tutoring-programme/covid-19-support-guide-for-schools/#closeSignup">a support guide for schools</a> designed to
             help teachers and school leaders support their pupils during remote education.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['curriculum_delivery'] }} for curriculum delivery:</h3>
-          {% if data['curriculum_delivery'] < 3 %}
+          {#   {% if data['curriculum_delivery'] < 3 %}   #}
           <p>GOV.UK provides:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>guidance on <a href="https://www.gov.uk/guidance/help-with-accessing-and-buying-resources-for-remote-education">accessing and buying resources for remote education</a></li>
@@ -186,14 +182,14 @@ Scores and recommendations
           <p><a href="https://www.thenational.academy/2020-21-oak-curriculum">Oak National Academy</a> provides resources and guidance on how to map resources to a school's existing curriculum.</p>
           <p><a href="https://www.rnibbookshare.org/cms/">RNIB Bookshare</a>, which was established through DfE's pilot load2learn, is providing on-demand access to over 350,000 accessible digital books for schools - free for any learner with a <a
               href="https://www.rnibbookshare.org/cms/bookshare-me/who-qualifies">print disability</a>.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['curriculum_assessment'] }} for assessment and feedback:</h3>
-          {% if data['curriculum_assessment'] < 3 %}
+          {#   {% if data['curriculum_assessment'] < 3 %}   #}
           <p>GOV.UK provides guidance on:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>assessing pupil progress and providing feedback in the <a href="https://www.gov.uk/government/publications/remote-education-good-practice/remote-education-good-practice#finding-solutions-in-remote-provision">Remote education good
@@ -201,9 +197,9 @@ Scores and recommendations
             <li><a href="https://www.gov.uk/government/publications/actions-for-schools-during-the-coronavirus-outbreak/guidance-for-full-opening-schools#section-4-assessment-and-accountability">assessments and exams</a></li>
           </ul>
           <p>The EdTech Demonstrator Programme provides <a href="https://edtech-demonstrator.lgfl.net/guidance/assessment">online training videos</a> for schools on effective assessment and feedback.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
   {% endif %}
 
@@ -218,34 +214,34 @@ Scores and recommendations
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['capacity-capability_effective-practice'] }} for effective practice:</h3>
-          {% if data['capacity-capability_effective-practice'] < 3 %}
+          {#   {% if data['capacity-capability_effective-practice'] < 3 %}   #}
           <p>The Education Endowment Foundation provides <a href="https://educationendowmentfoundation.org.uk/covid-19-resources/national-tutoring-programme/covid-19-support-guide-for-schools/#closeSignup">a support guide for schools</a> designed to
             help teachers and school leaders support their pupils during remote education.</p>
           <p>GOV.UK provides a <a href="https://www.gov.uk/government/publications/remote-education-good-practice/remote-education-good-practice#finding-solutions-in-remote-provision">good practice guide</a> to support schools in their delivery of
             remote education.</p>
           <p>The EdTech Demonstrator Programme provides guidance on <a href="">how to use online platforms and resources</a>, including for children with SEND.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['capacity-capability_staff-capability'] }} for staff capability:</h3>
-          {% if data['capacity-capability_staff-capability'] < 3 %}
+          {#   {% if data['capacity-capability_staff-capability'] < 3 %}   #}
           <p>The <a href="https://edtech-demonstrator.lgfl.net/">EdTech Demonstrator Programme</a> provides advice, guidance and practical support for teachers on how to deliver good remote education. This includes guidance on <a
               href="https://edtech-demonstrator.lgfl.net/guidance">how to use online platforms and resources</a>, including for children with SEND.</p>
           <p><a href="https://www.rnibbookshare.org/cms/">RNIB Bookshare</a>, which was established through DfE's pilot load2learn, is providing on-demand access to over 350,000 accessible digital books for schools - free for any learner with a <a
               href="https://www.rnibbookshare.org/cms/bookshare-me/who-qualifies">print disability</a>.</p>
           <p><a href="https://pdnet.org.uk/">pdnet</a> provides free <a href="https://pdnet.org.uk/meetings-and-conferences/">training events</a> for teachers and professionals on augmentative and alternative communication technology to support
             pupils with SEND.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['capacity-capability_strategic-partnerships'] }} for strategic partnerships:</h3>
-          {% if data['capacity-capability_strategic-partnerships'] < 3 %}
+          {#   {% if data['capacity-capability_strategic-partnerships'] < 3 %}   #}
           <p>There are several school-to-school support networks which you can make use of, including:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>The <a href="https://edtech-demonstrator.lgfl.net/">EdTech Demonstrator Programme</a> for advice and guidance on remote education, including how to embed technology into teaching practice, and how to embed practice across MATs</li>
@@ -253,9 +249,9 @@ Scores and recommendations
             <li><a href="https://www.gov.uk/guidance/get-support-from-your-local-english-education-hub">English hubs</a> to improve teaching of phonics, early language and reading in reception and year 1</li>
             <li><a href="https://www.gov.uk/guidance/get-support-from-your-local-computing-hub">Computing hubs</a> to improve the teaching of computing and increase participation in computer science</li>
           </ul>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
   {% endif %}
 
@@ -269,25 +265,25 @@ Scores and recommendations
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['communication_realistic-expectations'] }} for realistic expectations of pupils, parents and carers:</h3>
-          {% if data['communication_realistic-expectations'] < 3 %}
+          {#   {% if data['communication_realistic-expectations'] < 3 %}   #}
           <p>Remote education expectations are highlighted in the <a href="https://www.gov.uk/government/publications/actions-for-schools-during-the-coronavirus-outbreak/guidance-for-full-opening-schools#res">guidance for full opening</a>.</p>
           <p>GOV.UK has brought together <a href="">school-led webinars</a> to share best practice in setting up remote education.</p>
           <p>The <a href="https://www.gov.uk/guidance/school-workload-reduction-toolkit#communications">school workload reduction toolkit</a> provides example communication policies and email protocols.</p>
           <p>The Education Endowment Foundation has provided a <a
               href="https://educationendowmentfoundation.org.uk/public/files/Publications/Covid-19_Resources/Resources_for_schools/Communicating_Effectively_with_Families_-_Guide_for_Schools.pdf">guide for schools</a> on how to communicate with
             parents during COVID-19.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['communication_community-events'] }} for school community events:</h3>
-          {% if data['communication_community-events'] < 3 %}
+          {#   {% if data['communication_community-events'] < 3 %}   #}
           <p>recommendations</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
   {% endif %}
 
@@ -306,57 +302,57 @@ Scores and recommendations
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['safeguarding_ensuring-safety'] }} for ensuring safety:</h3>
-          {% if data['safeguarding_ensuring-safety'] < 3 %}
+          {#   {% if data['safeguarding_ensuring-safety'] < 3 %}   #}
           <p>GOV.UK provides guidance on <a href="https://www.gov.uk/guidance/safeguarding-and-remote-education-during-coronavirus-covid-19">Safeguarding and remote education during coronavirus (COVID-19)</a></p>
           <p>Schools should also refer to <a href="https://www.gov.uk/government/publications/keeping-children-safe-in-education--2">statutory guidance for schools and colleges on safeguarding children</a>.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['safeguarding_online-safety'] }} for online safety:</h3>
-          {% if data['safeguarding_online-safety'] < 3 %}
+          {#   {% if data['safeguarding_online-safety'] < 3 %}   #}
           <p>GOV.UK provides guidance on:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li><a href="https://www.gov.uk/guidance/safeguarding-and-remote-education-during-coronavirus-covid-19">Safeguarding and remote education during coronavirus (COVID-19)</a></li>
             <li><a href="https://www.gov.uk/government/publications/teaching-online-safety-in-schools">Teaching online safety in schools</a></li>
           </ul>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['safeguarding_wellbeing'] }} for wellbeing:</h3>
-          {% if data['safeguarding_wellbeing'] < 3 %}
+          {#   {% if data['safeguarding_wellbeing'] < 3 %}   #}
           <p>GOV.UK provides advice on supporting pupil <a href="https://www.gov.uk/government/publications/actions-for-schools-during-the-coronavirus-outbreak/guidance-for-full-opening-schools#pupil-wellbeing-and-support">wellbeing during remote
               education</a>.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['safeguarding_data-management'] }} for data management:</h3>
-          {% if data['safeguarding_data-management'] < 3 %}
+          {#   {% if data['safeguarding_data-management'] < 3 %}   #}
           <p>GOV.UK provides guidance to support schools:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>with <a href="https://www.gov.uk/government/publications/data-protection-toolkit-for-schools">data protection activity</a>, including compliance with GDPR</li>
             <li>to be <a href="https://www.ncsc.gov.uk/information/school-governor-questions">cyber secure</a></li>
           </ul>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
 
         <div class="statement-block">
           <h3 class="govuk-heading-m">You scored {{ data['safeguarding_behaviour'] }} for behaviour and attitude:</h3>
-          {% if data['safeguarding_behaviour'] < 3 %}
+          {#   {% if data['safeguarding_behaviour'] < 3 %}   #}
           <p>GOV.UK provides guidance on <a href="https://www.gov.uk/government/publications/actions-for-schools-during-the-coronavirus-outbreak/guidance-for-full-opening-schools#behaviour-expectations">behaviour expectations</a> in schools.</p>
-          {% else %}
+          {#   {% else %}   #}
           <p>You have no recommendations in this category as you scored 3 or above</p>
-          {% endif %}
+          {#   {% endif %}   #}
         </div>
   {% endif %}
 
