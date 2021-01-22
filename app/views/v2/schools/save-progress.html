@@ -13,17 +13,47 @@ Save progress
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Save progress</h1>
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Save your progress
+      </h1>
+      <div class="govuk-panel__body">
+        Your reference number<br><strong>HDJ2123F</strong>
+      </div>
+    </div>
+    <br>
 
+    <p>If you want to save your framework and return to your recommendations at a later stage then make a note of this code.</p>
 
+    <p>When you next return to the service, you’ll be asked to enter your unique code which will take you to your saved recommendations.</p>
+
+    <p>Alternatively, you can email yourself the unique web address with your saved recommendations and bookmark the link in your preferred browser. This option will also allow you to revisit what you’ve completed so far.</p>
 
     <div class="govuk-inset-text">
-      HXRY-1234
+        Whichever option you choose, you will only have to complete it once.
     </div>
 
-    <p>Here's the reference code for your review. You can make a note of this and use it to resume your progress at a later date.</p>
-    <p>Alternatively you can bookmark or copy <a href="#">this link</a>.</p>
-    <p><a href="task-list">Go back to task list</a></p>
+
+
+    <form action="recommendations" method="post" novalidate>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+          Email address
+        </label>
+        <div id="email-hint" class="govuk-hint">
+          We’ll only use this to send your unique web address
+        </div>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Send
+      </button>
+    </form>
+
+    <p>The Department for Education will not hold any personal data. Read our <a href="#">privacy policy</a>.
+
+
+    <p><a href="task-list" class="govuk-button govuk-button--secondary">Go back to task list</a></p>
 
 
 
