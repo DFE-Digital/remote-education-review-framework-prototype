@@ -26,4 +26,20 @@ router.post('/v2/sector-answer', function (req, res) {
   }
 });
 
+
+router.post('/v2/progress-answer', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const whichprogress = req.session.data['progress']
+
+  if (whichprogress === 'yes') {
+    res.redirect('/v2/schools/task-list')
+  } else {
+    res.redirect('/v2/schools/optional')
+  }
+});
+
+
 module.exports = router
