@@ -47,10 +47,27 @@ $govuk-assets-path: '/govuk/assets/';
 
 .statement-block {
   background: #f3f2f1;
+  border-left: 5px solid #f3f2f1;
   padding: 1rem 20% 1rem 1rem;
   margin-bottom: 2rem;
+  &.attention {
+    border-left: 5px solid #0055d2;
+  }
+  .attention-tag {
+    display: inline-block;
+    text-transform: uppercase;
+    background: #0055d2;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 .33rem;
+    margin-right: .66rem;
+  }
 }
 
 .govuk-form-group .govuk-heading-l + .govuk-label {
   margin-top: -18px;
+}
+
+.push-right {
+  float: right;
 }
