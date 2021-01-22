@@ -37,7 +37,7 @@ router.post('/v2/progress-answer', function (req, res) {
   if (whichprogress === 'yes') {
     res.redirect('/v2/schools/task-list')
   } else {
-    res.redirect('/v2/schools/optional')
+    res.redirect('/v2/sector')
   }
 });
 
