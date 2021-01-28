@@ -27,6 +27,17 @@ router.post('/v2/sector-answer', function (req, res) {
 });
 
 
+router.post('/v3/sector-answer', function (req, res) {
+  const whichsector = req.session.data['which-sector']
+  if (whichsector === 'schools') {
+    res.redirect('/v3/schools/optional')
+  } else {
+    res.redirect('/v3/fe/optional')
+  }
+});
+
+
+
 router.post('/v2/progress-answer', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements

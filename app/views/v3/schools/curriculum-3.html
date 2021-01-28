@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Curriculum planning and delivery</h1>
+
+
+    <form class="form" action="curriculum-4" method="post">
+
+      <span class="govuk-caption-l">3 of 4</span>
+      <h2 class="govuk-heading-l">Curriculum delivery</h2>
+
+      <p>The school has a system in place to support remote education, using curriculum-aligned, hardcopy or digital resources, or a combination of both. </p>
+      <p>The school has online platforms and tools that support effective communication and accessibility for all pupils, including those with SEND.</p>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery" name="curriculum_delivery" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-2" name="curriculum_delivery" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-3" name="curriculum_delivery" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-4" name="curriculum_delivery" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curriculum_delivery-5" name="curriculum_delivery" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="curriculum_delivery-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/schools/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

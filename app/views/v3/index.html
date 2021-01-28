@@ -1,0 +1,58 @@
+fary {% extends "layout.html" %}
+
+{% block pageTitle %}
+Review your remote education provision
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+
+    <p>This service has been provided to help schools and colleges in their remote education provision.</p>
+
+    <p>You can use this service to:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>identify strengths and possible areas for improvement in your remote education provision</li>
+      <li>get recommendations (including links to guidance and resources) to help improve your provision if necessary</li>
+      <li>support detailed discussions on appropriate next steps</li>
+    </ul>
+
+    <p>You can use this service if you are a:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>MAT leader</li>
+      <li>schools leader</li>
+      <li>governor in England</li>
+      <li>FE provider (including colleges, sixth form providers and independent training providers)</li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      <p>The answers you provide as part of your review are for the benefit of your school or college only. The review is not a compliance or accountability tool. It is not statutory, and your school or college can use it to meet their own needs.</p>
+      <p>The Department for Education (DfE) will not collect any data that can identify your school or college.</p>
+    </div>
+
+    <a href="v3/sector" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+      Start now
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+      </svg>
+    </a>
+
+
+
+
+  </div>
+
+
+</div>
+{% endblock %}

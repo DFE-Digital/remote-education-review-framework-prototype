@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Scores and recommendations
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript">
+  var theCurrentPage = 'recommendations';
+</script>
+
+</script>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your recommendations</h1>
+    <p>Based on the scores you have given so far, you could consider the following recommendations to improve your remote education provision.</p>
+    <!-- <p>
+      <a href="task-list">
+        Return to category overview</a>
+    </p> -->
+    <br>
+  </div>
+
+
+  <div class="govuk-grid-column-full">
+
+
+    <h2 class="govuk-heading-l">
+      Leadership
+    </h2>
+
+    <hr><br>
+
+    <h3 class="govuk-heading-m">Recommended guidance based on your scores</h3>
+
+    <div class="statement-block attention">
+      <h3 class="govuk-heading-s">You scored 2 for remote education plan:</h3>
+      <p>The EdTech Demonstrator Programme provides resources to support schools and colleges. This includes <a href="#">short videos</a> developed by schools and colleges on developing remote education plans, and <a href-="#">guidance</a> on
+        how
+        to embed digital technology.</p>
+      <p>GOV.UK has brought together <a href="#">school-led webinars</a> to share best practice in setting up remote education.</p>
+      <p>For guidance on how to remain cyber-secure, please refer to <a href="#">Cyber security in schools: questions for governors and trustees</a></p>
+      <p>Read the <a href="#">guidance for full opening and refer to Oak National Academy for help to deliver a planned curriculum for all</a>.</p>
+    </div>
+
+    <div class="statement-block attention">
+      <h3 class="govuk-heading-s">You scored 3 for communication:</h3>
+      <p>Ensure governors, staff, parents and carers are aware of the school’s remote education provision by maintaining regular communication and providing updates on any changes to the provision.</p>
+      <p>The Education Endowment Foundation has provided a <a href="#">guide for schools</a> on how to communicate with parents during COVID-19.</p>
+    </div>
+
+    <hr><br>
+
+    <h3 class="govuk-heading-m">Additional guidance</h3>
+
+
+    <div class="statement-block">
+      <h3 class="govuk-heading-s">You scored 4 for monitoring and evaluation:</h3>
+      <p>GOV.UK provides the following guidance:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#">recording attendance in relation to coronavirus (COVID-19) during the 2020 to 2021 academic year</a></li>
+        <li><a href="#">full opening for schools: school workforce</a></li>
+        <li><a href="#">remote education good practice</a></li>
+      </ul>
+    </div>
+
+
+    <a class="govuk-button push-right" href="task-list">Continue</a>
+
+
+  </div>
+
+
+</div>
+
+
+
+{% endblock %}

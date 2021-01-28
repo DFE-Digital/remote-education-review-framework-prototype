@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Review your remote education provision
+    </h1>
+
+    <p>Work through the categories to assess your remote education provision. Recommendations will be suggested after each category to help improve your provision.</p>
+    <p>You can save your progress and revisit the service at any time.  Your recommendations will be saved.</p>
+
+    <p>
+      <a href="recommendations" class="govuk-button">
+        View all recommendations
+      </a>
+      &nbsp;
+      <a class="govuk-button govuk-button--secondary" href="save-progress">
+        Save your progress
+      </a>
+    </p>
+
+
+    <ul class="app-task-list__items rerf">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="leadership-1" aria-describedby="leadership-status">
+            Leadership
+          </a>
+        </span>
+        {% if data['leadership_monitoring-and-evaluating'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Create a clear vision and approach for remote education, and maintain awareness of any issues or barriers related to effective delivery.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="recpe-1" aria-describedby="recpe-status">
+            Remote education context and pupil engagement
+          </a>
+        </span>
+        {% if data['recpe_pdsl'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Understand the pupils' remote access arrangements, and plan provision to ensure pupils remain engaged in education.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="curriculum-1" aria-describedby="curriculum-status">
+            Curriculum planning and delivery
+          </a>
+        </span>
+        {% if data['curriculum_assessment'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Build a well-sequenced curricula that supports 'hybrid' teaching, and has the relevant resources in place to deliver the curriculum remotely.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="capacity-1" aria-describedby="capacity-status">
+            Capacity and capability
+          </a>
+        </span>
+        {% if data['capacity-capability_strategic-partnerships'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Support staff to deliver high-quality remote education.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="communication-1" aria-describedby="communication-status">
+            Communication
+          </a>
+        </span>
+        {% if data['communication_community-events'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Establish strong communication with pupils, parents and carers, which continues to work effectively with other third parties.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="safeguarding-1" aria-describedby="safeguarding-status">
+            Safeguarding and wellbeing
+          </a>
+        </span>
+        {% if data['safeguarding_behaviour'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Teachers and leaders understand how to maintain effective safeguarding arrangements whilst also providing high-quality remote education and supporting pupil wellbeing.</p>
+      </li>
+    </ul>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/schools/scoring_aside.html" %}
+  </div>
+
+
+
+</div>
+
+{% endblock %}

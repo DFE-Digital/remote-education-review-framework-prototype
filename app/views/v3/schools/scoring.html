@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Scoring
+    </h1>
+
+    <p>The scoring below provides a structure to identify the school's current position in relation to its remote education practice across the 6 categories within the framework. Assessing each category in this way will help school leaders
+      identify areas of strength and those needing further work.</p>
+
+    <p><strong>1. Identify</strong><br>
+      Not yet in place or there are major gaps.
+    </p>
+    <p><strong>2. Develop and plan</strong><br>
+      Identified gaps but a plan is being developed to address them.
+    </p>
+    <p><strong>3. Implement</strong><br>
+      In the process of implementing systems and practices to address this.
+    </p>
+    <p><strong>4. Embed</strong><br>
+      Practices and systems are in place with minor gaps.
+    </p>
+    <p><strong>5. Sustain</strong><br>
+      Practices and systems are fully embedded, and there are examples of best practice.
+    </p>
+
+    <br>
+    <p><a href="task-list">
+      Return to the framework</a></p>
+
+  </div>
+
+
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        About the framework
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <!-- <li>
+            <a href="#">
+              Aims of the framework
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Why schools need the framework
+            </a>
+          </li> -->
+          <li>
+            <a href="using-the-framework">
+              Using the framework
+            </a>
+          </li>
+          <li>
+            <a href="scoring">
+              Scoring
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Return to this later
+      </h2>
+      <p><a href="#">
+          Save my progress
+        </a></p>
+      <p>To make sure your review and results will not be lost at any time, get a reference code.</p>
+    </aside> -->
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

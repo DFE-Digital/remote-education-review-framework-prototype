@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Optional information
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">
+      About you
+    </h1>
+
+
+  <p>In order for you to get the right additional support, here are some optional questions that will help tailor the recommendations to meet your specific needs.</p>
+  <p>If you don't want to complete them you can <a href="task-list">skip to your review framework</a></p>
+  <br>
+
+
+    <form class="form" action="task-list" method="post">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-fieldset__heading">
+                Type of school
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  local authority
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  free school
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  academy
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-l">
+            School region
+          </h2>
+          <label class="govuk-label" for="sort">
+            Select a region
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">North East</option>
+            <option value="updated" selected>North West</option>
+            <option value="views">Yorkshire and the Humber</option>
+            <option value="comments">West Midlands</option>
+            <option value="comments">East Midlands</option>
+            <option value="comments">South East</option>
+            <option value="comments">East of England</option>
+            <option value="comments">Greater London</option>
+            <option value="comments">South West</option>
+          </select>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-l">
+            Number of pupils
+          </h2>
+          <label class="govuk-label" for="sort">
+            Select a range
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>0 - 100</option>
+            <option value="updated">100 - 200</option>
+            <option value="views">200 - 500</option>
+            <option value="comments">500 - 700</option>
+            <option value="700+">700+</option>
+          </select>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-l">
+            Percentage of pupil premium
+          </h2>
+          <label class="govuk-label" for="sort">
+            Select a range
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>0 - 10%</option>
+            <option value="updated">10% - 20%</option>
+            <option value="views">20% - 30%</option>
+            <option value="comments">30% - 40%</option>
+            <option value="700+">40% +</option>
+          </select>
+        </div>
+
+
+        <br>
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

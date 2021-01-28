@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Remote education context and pupil engagement</h1>
+
+
+    <form class="form" action="recpe-4" method="post">
+
+      <span class="govuk-caption-l">3 of 5</span>
+      <h2 class="govuk-heading-l">Supporting children with additional needs</h2>
+
+      <p>Children and young people with high needs, including disadvantaged pupils, SEND and vulnerable pupils, have the right structures and provision in place to help remote education.</p>
+      <p>This includes guidance for parents and carers on how to effectively support remote education, and ensuring pupils have access to the right hardware and software to support their needs.</p>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_send" name="recpe_send" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="recpe_send">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_send-2" name="recpe_send" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="recpe_send-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_send-3" name="recpe_send" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="recpe_send-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_send-4" name="recpe_send" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="recpe_send-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recpe_send-5" name="recpe_send" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="recpe_send-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/schools/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

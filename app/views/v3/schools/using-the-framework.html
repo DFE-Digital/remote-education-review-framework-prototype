@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Using the framework
+    </h1>
+
+    <p>You can work through the entire framework to identify strengths and areas for improvement in remote education with your senior leadership team (taking approximately 1 hour to complete as a group), or focus on specific sections that have been previously identified as priorities.</p>
+    <p>The framework will help you to have conversations with all stakeholders within the school community (for example, staff, governors, parents) about remote education provision.</p>
+    <p>The framework can help you meet basic requirements using the resources and tools you currently have (digital or physical), and to take your remote education provision further. School leaders should allocate a score to each statement where possible, identify strengths and areas for improvement, and discuss next steps with members of the SLT and governors. The framework offers suggested actions and links to relevant support depending on scores and any gaps identified.</p>
+    <p>You can use the framework more than once to adopt practical steps and move from the "identifying" stage to the "sustaining" stage: to embed a sustainable strategy for remote education.</p>
+
+    <br>
+    <p><a href="task-list">
+      Return to the framework</a></p>
+
+  </div>
+
+
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        About the framework
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <!-- <li>
+            <a href="#">
+              Aims of the framework
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Why schools need the framework
+            </a>
+          </li> -->
+          <li>
+            <a href="using-the-framework">
+              Using the framework
+            </a>
+          </li>
+          <li>
+            <a href="scoring">
+              Scoring
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Return to this later
+      </h2>
+      <p><a href="#">
+          Save my progress
+        </a></p>
+      <p>To make sure your review and results will not be lost at any time, get a reference code.</p>
+    </aside> -->
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

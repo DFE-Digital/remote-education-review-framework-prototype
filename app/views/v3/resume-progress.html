@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Save progress
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Continue your review</h1>
+
+
+    <p>Enter your unique code and continue to your remote education framework.</p>
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="one-quarter">
+        Unique code
+      </label>
+      <input class="govuk-input govuk-!-width-one-quarter" id="one-quarter" name="one-quarter" type="text">
+
+      <a href="schools/task-list" class="govuk-button">
+        Continue
+      </a>
+
+    </div>
+
+
+    <p>Don't have your unique code? <a href="sector">Start a new review</a></p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+
+</div>
+
+{% endblock %}

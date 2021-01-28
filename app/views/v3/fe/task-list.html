@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Review your remote education provision
+    </h1>
+
+    <p>The categories below provide a structure to identify the current position of your remote education provision. Assessing each category will help you to identify areas of strength and those needing further work.</p>
+
+
+    {%
+      if data['leadership_monitoring-and-evaluating'] or data['recpe_pdsl']
+    %}
+    <form action="recommendations" method="post" novalidate>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        View your recommendations
+      </button>
+
+      <input type="hidden" name="referrer" value="task-list">
+
+    </form>
+    {% endif %}
+
+
+
+    <ul class="app-task-list__items rerf">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="leadership-1" aria-describedby="leadership-status">
+            Leadership
+          </a>
+        </span>
+        {% if data['leadership_monitoring-and-evaluating'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>College leaders have a clear vision and approach for remote education, and maintain awareness of any issues or barriers related to effective delivery.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="recpe-1" aria-describedby="recpe-status">
+            Remote education context and student engagement
+          </a>
+        </span>
+        {% if data['recpe_pdsl'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>The college understands the students' remote education context, and plans its provision to ensure students can remain engaged in education.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="curriculum-1" aria-describedby="curriculum-status">
+            Curriculum planning and delivery
+          </a>
+        </span>
+        {% if data['curriculum_assessment'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>The college has well-sequenced curricula that support ‘hybrid’ teaching, and has the relevant resources in place to deliver the curriculum or course content remotely.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="capacity-1" aria-describedby="capacity-status">
+            Capacity and capability
+          </a>
+        </span>
+        {% if data['capacity-capability_strategic-partnerships'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Colleges support staff to deliver high-quality remote education.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="communication-1" aria-describedby="communication-status">
+            Communication and partnership working
+          </a>
+        </span>
+        {% if data['communication_community-events'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>The college maintains strong communication with students, parents and carers, and continues to work effectively with other third parties.</p>
+      </li>
+
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="safeguarding-1" aria-describedby="safeguarding-status">
+            Safeguarding and wellbeing
+          </a>
+        </span>
+        {% if data['safeguarding_behaviour'] %}
+        <strong class="govuk-tag app-task-list__tag" id="leadership-status">Completed</strong>
+        {% else %}
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="leadership-status">Not started</strong>
+        {% endif %}
+        <br>
+        <p>Teachers and leaders understand how to maintain effective safeguarding arrangements whilst also providing high-quality remote education and supporting student wellbeing.</p>
+      </li>
+    </ul>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/fe/scoring_aside.html" %}
+  </div>
+
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your answers</h1>
+
+    <h2 class="govuk-heading-l">Leadership</h2>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9 rubric-answers">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Remote education plan
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['leadership_remote-ed-plan'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Remote education plan</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Communication
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['leadership_communication'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Communication</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Monitoring and evaluating
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['leadership_monitoring-and-evaluating'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> Monitoring and evaluating</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <p>Once you're happy with your scores, you can get recommendations on how to improve your remote education provision.</p>
+    <br>
+
+    <form action="recommendations-single-section" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <input type="hidden" name="referrer" value="leadership">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Get recommendations
+      </button>
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/fe/scoring_aside.html" %}
+  </div>
+
+</div>
+
+{% endblock %}

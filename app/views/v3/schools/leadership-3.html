@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Leadership</h1>
+
+    <!-- <p>School leaders have a clear vision and approach for remote education, and maintain awareness of any issues or barriers related to effective delivery.</p> -->
+
+    <br>
+    <form class="form" action="leadership-answers" method="post">
+
+      <span class="govuk-caption-l">3 of 3</span>
+      <h2 class="govuk-heading-l">Monitoring and evaluating</h2>
+
+      <p>The school has systems in place to monitor the impact of remote education. This includes:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>understanding the impact on staff workload and how to mitigate against it</li>
+        <li>staffing changes</li>
+        <li>having access to appropriate management information (such as staff and pupil sickness and absence data) to help the school respond to changing contexts</li>
+      </ul>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_monitoring-and-evaluating" name="leadership_monitoring-and-evaluating" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="leadership_monitoring-and-evaluating">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_monitoring-and-evaluating-2" name="leadership_monitoring-and-evaluating" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="leadership_monitoring-and-evaluating-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_monitoring-and-evaluating-3" name="leadership_monitoring-and-evaluating" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="leadership_monitoring-and-evaluating-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_monitoring-and-evaluating-4" name="leadership_monitoring-and-evaluating" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="leadership_monitoring-and-evaluating-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leadership_monitoring-and-evaluating-5" name="leadership_monitoring-and-evaluating" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="leadership_monitoring-and-evaluating-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/schools/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

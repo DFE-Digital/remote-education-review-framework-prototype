@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Capacity and capability</h1>
+
+
+    <form class="form" action="capacity-3" method="post">
+
+      <span class="govuk-caption-l">2 of 3</span>
+      <h2 class="govuk-heading-l">Staff capability</h2>
+
+      <p>Staff have access to the digital resources and tools (for example, textbooks, workbooks, platforms, devices and internet) they need to teach and support pupils remotely.</p>
+      <p>Where used, staff have the appropriate training and support to use digital tools and resources, including how to ensure they are accessible for pupils with SEND.</p>
+      <p>Where possible, the training provided is sustained and iterative to ensure staff continue to support effective teaching practice remotely.</p>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_staff-capability" name="capacity-capability_staff-capability" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_staff-capability">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_staff-capability-2" name="capacity-capability_staff-capability" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_staff-capability-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_staff-capability-3" name="capacity-capability_staff-capability" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_staff-capability-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_staff-capability-4" name="capacity-capability_staff-capability" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_staff-capability-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="capacity-capability_staff-capability-5" name="capacity-capability_staff-capability" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="capacity-capability_staff-capability-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/schools/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}

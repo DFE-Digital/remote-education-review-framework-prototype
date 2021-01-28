@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href='javascript:history.back()'>Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Communication and partnership working</h1>
+
+
+    <form class="form" action="communication-2" method="post">
+
+      <span class="govuk-caption-l">1 of 3</span>
+      <h2 class="govuk-heading-l">Realistic expectations of students, parents and carers</h2>
+
+      <p>Parents and carers have clear guidance on, and students understand, the expectations on how many hours they should be learning and how to participate in remote education (for example, how to submit assignments)</p>
+      <p>Remote education is designed to acknowledge pupils as novices.</p>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="communication_realistic-expectations" name="communication_realistic-expectations" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="communication_realistic-expectations">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="communication_realistic-expectations-2" name="communication_realistic-expectations" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="communication_realistic-expectations-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="communication_realistic-expectations-3" name="communication_realistic-expectations" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="communication_realistic-expectations-3">
+                3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="communication_realistic-expectations-4" name="communication_realistic-expectations" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="communication_realistic-expectations-4">
+                4
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="communication_realistic-expectations-5" name="communication_realistic-expectations" type="radio" value="5">
+              <label class="govuk-label govuk-radios__label" for="communication_realistic-expectations-5">
+                5
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    {% include "v3/fe/scoring_aside.html" %}
+  </div>
+
+
+
+
+</div>
+
+{% endblock %}
