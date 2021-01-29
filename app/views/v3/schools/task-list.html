@@ -19,16 +19,17 @@ Task list
     <p>Work through the categories to assess your remote education provision. Recommendations will be suggested after each category to help improve your provision.</p>
     <p>You can save your progress and revisit the service at any time.  Your recommendations will be saved.</p>
 
+{% if data['leadership_monitoring-and-evaluating'] %}
     <p>
       <a href="recommendations" class="govuk-button">
         View all recommendations
       </a>
-      &nbsp;
+      <!-- &nbsp;
       <a class="govuk-button govuk-button--secondary" href="save-progress">
         Save your progress
-      </a>
+      </a> -->
     </p>
-
+{% endif %}
 
     <ul class="app-task-list__items rerf">
       <li class="app-task-list__item">
